@@ -1,6 +1,6 @@
 <script setup>
 import { ref } from "vue";
-import ItemCard from "../layout/ItemCard.vue";
+import ItemCard from "../layouts/ItemCard.vue";
 
 const items = ref([
   {

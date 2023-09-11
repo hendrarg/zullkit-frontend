@@ -1,6 +1,6 @@
 <script setup>
 import { ref } from "vue";
-import CategoryCard from "../layout/CategoryCard.vue";
+import CategoryCard from "../layouts/CategoryCard.vue";
 
 const categories = ref([
   {

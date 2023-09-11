@@ -18,12 +18,22 @@ const router = createRouter({
     {
       path: "/register",
       name: "register",
-      component: () => import("../views/Register.vue"),
+      component: () => import("../views/RegisterView.vue"),
     },
     {
       path: "/product",
       name: "product",
-      component: () => import("../views/Detailview.vue"),
+      component: () => import("../views/DetailView.vue"),
+    },
+    {
+      path: "/pricing",
+      name: "pricing",
+      component: () => import("../views/PricingView.vue"),
+    },
+    {
+      path: "/success",
+      name: "success",
+      component: () => import("../views/SuccessView.vue"),
     },
   ],
 });
