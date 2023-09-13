@@ -10,13 +10,13 @@ const items = ref([
     image: "items-1.jpg",
   },
   {
-    id: 1,
+    id: 2,
     title: "Online Doctor Consultation",
     desc: "Website UI Kit",
     image: "items-2.jpg",
   },
   {
-    id: 1,
+    id: 3,
     title: "Banking Crypto",
     desc: "Mobile UI Kit",
     image: "items-3.jpg",
@@ -30,6 +30,7 @@ const items = ref([
       <ItemCard
         v-for="item in items"
         :key="item.id"
+        :id="item.id"
         :title="item.title"
         :desc="item.desc"
         :image="item.image"

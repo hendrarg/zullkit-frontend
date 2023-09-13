@@ -14,7 +14,7 @@ const galleries = ref([
   <section id="gallery">
     <img
       :src="'src/assets/img/' + defaultImage"
-      alt=""
+      alt="titile"
       class="w-full mt-6 rounded-2xl"
     />
     <div class="grid grid-cols-4 gap-4 mt-4">
