@@ -12,10 +12,11 @@ async function getItemsData() {
   try {
     const response = await axios.get(
       "https://zullkit-backend.belajarkoding.com/api/categories?id=" +
-        route.params.id +
-        "&show_product=1"
+      route.params.id +
+      "&show_product=1"
     );
-    items.value = response.data.data.products;
+    items.value = response.data.data.product;
+    category.value = response.data.data;
   } catch (error) {
     console.error(error);
   }
@@ -31,14 +32,8 @@ onMounted(() => {
       {{ category.name }}
     </h2>
     <div class="flex flex-wrap -mx-1 lg:-mx-4">
-      <ItemCard
-        v-for="item in items"
-        :key="item.id"
-        :id="item.id"
-        :title="item.name"
-        :desc="item.subtitle"
-        :image="item.thumbnails"
-      />
+      <ItemCard v-for="item in items" :key="item.id" :id="item.id" :title="item.name" :desc="item.subtitle"
+        :image="item.thumbnails" />
     </div>
   </div>
 </template>
