@@ -1,17 +1,28 @@
+<script setup>
+import { userStore } from "@/stores/user";
+import { computed } from "vue";
+
+const store = userStore();
+const user = computed(() => store.user);
+console.log(user);
+</script>
 
 <template>
-  <div class="md:order-2">
-    <RouterLink
-      to="login"
-      class="px-8 py-3 mt-2 mr-2 text-base font-medium text-black bg-gray-200 border border-transparent rounded-full hover:bg-gray-300 md:py-2 md:text-sm md:px-8 hover:shadow"
+  <div class="flex item-center md:order-2">
+    <div class="mr-2 text-sm my-auto font-regular">{{ user.data.name }}</div>
+    <button
+      type="button"
+      class="flex mr-3 text-sm bg-gray-800 rounded-full md:mr-0 focus:ring-4 focus:ring-gray-300 dark:focus:ring-gray-300"
+      id="user-menu-button"
+      aria-expanded="false"
+      data-dropdown-toggle="dropdown"
     >
-      Sign In
-    </RouterLink>
-    <RouterLink
-      to="register"
-      class="px-8 py-3 text-base font-medium text-white border border-transparent rounded-full bg-navy hover:bg-navy md:py-2 md:text-sm md:px-8 hover:shadow"
-    >
-      Sign Up
-    </RouterLink>
+      <span class="sr-only">Open user menu</span>
+      <img
+        class="w-8 h-8 rounded-full"
+        src="https//:ui-avatars.com/api/?name=Galih+Pratama&background=160442&color=fff"
+        alt="user photo"
+      />
+    </button>
   </div>
 </template>

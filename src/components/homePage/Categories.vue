@@ -10,7 +10,6 @@ async function getCategoriesData() {
     const response = await axios.get(
       "https://zullkit-backend.belajarkoding.com/api/categories?show_product=1&limit=4"
     );
-    console.log(response.data);
     categories.value = response.data.data.data;
   } catch (error) {
     console.error(error);

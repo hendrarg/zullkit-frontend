@@ -31,7 +31,7 @@ onMounted(() => {
         :id="category.id"
         :key="category.id"
         :title="category.name"
-        :count="products_count"
+        :count="category.products_count"
         :image="category.thumbnails"
       />
     </div>
