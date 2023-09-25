@@ -4,7 +4,6 @@ import { computed } from "vue";
 
 const store = userStore();
 const user = computed(() => store.user);
-console.log(user);
 </script>
 
 <template>
@@ -20,7 +19,7 @@ console.log(user);
       <span class="sr-only">Open user menu</span>
       <img
         class="w-8 h-8 rounded-full"
-        src="https//:ui-avatars.com/api/?name=Galih+Pratama&background=160442&color=fff"
+        :src="user.data.profile_photo_url"
         alt="user photo"
       />
     </button>

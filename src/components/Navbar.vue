@@ -14,7 +14,6 @@ const user = computed(() => store.user);
 
 onMounted(() => {
   store.fetchUser();
-  console.log(store);
 });
 </script>
 

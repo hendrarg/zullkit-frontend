@@ -12,7 +12,6 @@ export const userStore = defineStore("userStore", {
   },
   actions: {
     async fetchUser() {
-      console.info("localStorage", localStorage);
       try {
         const { data } = await axios.get("https://zullkit-backend.belajarkoding.com/api/user", {
           headers: {
